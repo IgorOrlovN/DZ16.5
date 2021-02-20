@@ -16,7 +16,7 @@ int main()
         }
         std::cout << "\n";
     }
-    const int stroka = 20 % 10;
+    const int stroka = 20 % N;
     int sum = 0;
     for (int i = 0; i < N; ++i)
     {
