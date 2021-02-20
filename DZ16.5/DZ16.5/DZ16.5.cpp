@@ -2,22 +2,28 @@
 //
 
 #include <iostream>
-
+using namespace std;
 int main()
 {
-    int sum;
-    const int size = 3;
-    int a[size][size] = { {2,3,4},{3,4,5},{4,5,6} };
-    for ( int i=0;i<size;i++)
+    int a[10][10];
+    for ( int i=0;i<10;i++)
     {
-        for (int j = 0; j < size; j++)
-        {          
-                std::cout << a[i][j]; 
+        for (int j = 0; j < 10; j++)
+        {       
+                a[i][j] = (i+1)+(j+1);
+                std::cout << a[i][j]<<" "; 
         }
         std::cout << "\n";
     }
-    sum = a[2][0] + a[2][1] + a[2][2];
+    const int stroka = 20 % 10;
+    int sum = 0;
+    for (int i = 0; i < 10; ++i)
+    {
+        sum += a[stroka][i];
+    }
     std::cout << sum;
+    return 0;
+
 
 }
 
